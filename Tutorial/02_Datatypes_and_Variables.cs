@@ -9,7 +9,9 @@
 
     Here's an interesting fact for you:
         ! Everything in C# is an object. Primitive types are object too.
+
     * Gasp *
+
     What does this mean? This means even integers has methods we can access:
         (102).ToString();
     Completely valid!
@@ -60,6 +62,8 @@
         X : var a;
 
     - Use 'dynamic' - Like in Python, type is deduced at runtime. Means you can later reassigned it a value of different type.
+
+    * Hey, this looks a lot like Dart programming language for Flutter! :O
 */
 
 /*
@@ -67,15 +71,19 @@
     * 02_4 - References
     * ==========================================
     Pointer and References - Hated by C++ students, is in C#.
-    However, pointers can only be used when you compile the code in unsafe context. Hardly ever we'll use pointers in C#
+    However, pointers can only be used when you compile the code in unsafe context. Hardly ever we'll use pointers in C#.
+    BUT WAIT!
 
-    HOWEVER, in methods and functions, we still is able to choose to pass a supposed-to-be ValueType by reference. This way
+    In methods and functions, we still is able to choose to pass a supposed-to-be ValueType by reference. This way
     we still is able to mutate ValueType arguments.
 
     > In function signature, the argument needs to be specified with 'ref' keyword
             void mutate( ref int n ) {...}
     > Then, when passing in arguments, also prefix with 'ref' keyword
             mutate( ref myNumber );
+
+    Then, myNumber will be passed inside by reference and not the copy of the value itself. 'ref' must be specified by both
+    the calling method, and the parameter.
 */
 
 

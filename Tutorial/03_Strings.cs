@@ -11,6 +11,7 @@
 
     Since Strings are immutable, we should be using StringBuilder class to manipulate strings, like in Java:
     (StringBuilder is located in System.Text.StringBuilder)
+
             using System.Text;
             ...
             StringBuilder sb = new StringBuilder();
@@ -26,10 +27,12 @@
     Like:
         String.format( "{0} {1}", 1000, "Hello" );
         >> 1000 Hello
+
     It is built into Console.Write() and Console.WriteLine():
         Console.WriteLine("{0} {1}", 1000, "Hello");
         >> 1000 Hello
 
+    
     
     Starting C# 6, you can have string interpolation - very neat:
         int n = 1000;

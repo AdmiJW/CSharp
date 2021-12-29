@@ -3,7 +3,9 @@
     * 04_1 - Type Conversions
     * =======================
     
-    Old school type casting is still present. You should know what can be type casted this way and what's not.
+    Old school type casting is still present. You should know what can be type casted this way and what's not from your past
+    experiences with old school programming languages
+    
         int i = (int)1.234;
         double d = (double)123;
 

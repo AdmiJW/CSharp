@@ -17,9 +17,12 @@
         public delegate int MyDelegate (string s);
 
     Then, once our delegate type is declared, we can now instantiate it and assign it a reference to some method.
+
         MyDelegate delegate = SomeMethodWithSameSignature;
         delegate("Hello World");
+
     As an starter example, you may choose to do so to 'wrap' the Console.WriteLine()
+        
         MyDelegate print = Console.WriteLine;
         print("Hello World");
 */
@@ -37,6 +40,7 @@
 
     What if I don't want to use delegate without having to write out a named function somewhere? Anonymous functions!
     In Java sadly, an anonymous function still require an interface to be implemented, like:
+
     ? (Java Code)
             interface IntegerCompute {
                 int operation(int a, int b);
@@ -45,6 +49,7 @@
             IntegerCompute adder = (a,b)-> a + b;
     ? (End of Java Code)
     
+
     In C# however, no need for all that code! Look how can I make an anonymous function out of delegates:
 
             delegate int IntegerCompute(int a, int b);
@@ -90,7 +95,7 @@
 
 /*
     * ================================
-    * 08_4 Lambda
+    * 08_4 Lambda Expressions
     * ================================
     What? Even using delegate keyword to create anonymous function is too annoying? Say no more: Lambda Expressions ;)
 

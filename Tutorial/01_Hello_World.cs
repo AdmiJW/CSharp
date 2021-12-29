@@ -3,13 +3,17 @@
     When learning C#, you will sometimes see it resembles C++, while the other times, you see it resembles Java...
 */
 
+
 /* 
     * ==================================
     * 01_1 - .NET framework
     * ==================================
 
-    C# is very tightly associated with .NET framework. .NET framework is simply a framework for building applications
-    on the windows. .NET framework consists of 2 major components:
+    C# is very tightly associated with .NET framework. .NET framework stands for Network Enabled Technology, while the
+    dot (.) means object oriented. It is simply a framework for building applications on the windows. For example,
+    ASP.NET (Active Server Pages) is framework from microsoft for building web applications.
+
+    .NET framework consists of 2 major components:
 
     * Common Language Runtime (CLR) - Execution engine that handles running applications. Thread management, Garbage 
     *                                 collection, Type-Safety, Exception Handling and stuff.
@@ -18,6 +22,7 @@
     .NET applications can be written under C#, F# or Visual Basic programming language. Code will be compiled into a
     language-agostic Common Intermediate Language (CIL) stored in assemblies (.dll or .exe). When the application runs,
     CLR takes the assembly and use a JIT (Just In Time Compiler) to translate into machine code.
+
     ? Does this look like how Java program is executed (source > bytecode > JVM)? Because it kinda is!
 
     Let's take a look at the below Hello World program in C#, and I will explain about each line:
@@ -25,11 +30,15 @@
 
 
 
+//? Like "using namespace std" in C++, like import java.* from Java
 using System;
+
 
 namespace T01_Hello_World {
     class HelloWorld {
         static void Main(string[] args) {
+            
+            //* If we do not put "using System", we would need System.Console.WriteLine();
             Console.WriteLine("Hello World!");          
 
             Console.WriteLine("The time now is: {0}", System.DateTime.Now );
@@ -52,7 +61,7 @@ namespace T01_Hello_World {
     * 01_3 - Namespaces
     * ===========================
 
-    In C#, we will be introduced to the concept of `namespace` (Which is also present in C++).
+    In C#, we will be introduced to the concept of `namespace` (Which is also present in C++ or other languages).
     A namespace is simply a container for related classes. For example, `System` is also a namespace, which inside would 
     contain a bunch of other nested namespaces, or classes that we may or may not use in our application.
 
@@ -60,6 +69,8 @@ namespace T01_Hello_World {
         - System is a namespace provied by .NET API which contains many classes to create your application. One of the classes
           inside the System namespace that we'll use, is the 'Console' class. The Console class contains 'WriteLine()' method
           we use to print strings out to the console!
+
+          To see the full reference, visit https://referencesource.microsoft.com/
 
     System
     |- Console
@@ -69,6 +80,8 @@ namespace T01_Hello_World {
     BTW, if you do not put a class inside a namespace, it will by default belong to the global namespace.
     const obj = new global::MyClass();
     > https://stackoverflow.com/questions/25491518/what-namespace-will-a-class-have-if-no-namespace-is-defined
+
+
 
     * ===========================
     * 01_4 - Importing Namespaces
@@ -94,9 +107,11 @@ namespace T01_Hello_World {
     ! This extension allows for running cs scripts without setting up a project, and even include scripts via comments:
     ! Like:
     !        "//css_include <filename>"
+    ! But if you want to set up the project, see https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code
+
 
     * =====================================
-    * 01_5- Importing Class Static Stuff
+    * 01_5- Importing Class Static Members
     * =====================================
     You might be wondering if its possible to take a step further, and to only write:
         WriteLine("Hello World");

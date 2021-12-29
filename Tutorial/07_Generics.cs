@@ -4,7 +4,7 @@
     * 07_1 - Generic Class and Methods
     * ================================
     https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics
-    Generics. Encouraging code reuse with compliance of DRY principle
+    Generics : Encouraging code reuse with compliance of DRY principle
 
     Start your class with something like:
 
