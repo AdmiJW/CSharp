@@ -42,7 +42,7 @@ namespace T01_Hello_World {
             Console.WriteLine("Hello World!");          
 
             Console.WriteLine("The time now is: {0}", System.DateTime.Now );
-            Console.WriteLine("You are currently on machine: {0}", System.Environment.MachineName );
+            Console.WriteLine( $"You are currently on machine: { System.Environment.MachineName }");
         }
     }
 }

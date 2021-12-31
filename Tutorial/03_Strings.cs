@@ -62,6 +62,7 @@ namespace T03_Strings {
             // Composite formatting
             string f = String.Format("{0:c} {1:00.00} {2:.00}", first, second, third);
             Console.WriteLine(f);
+            
             // String interpolation
             f = $"{first:c} {second:00.00} {third:.00}";
             Console.WriteLine(f);
